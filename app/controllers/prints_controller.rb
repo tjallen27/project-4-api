@@ -16,6 +16,7 @@ class PrintsController < ApplicationController
   # POST /prints
   def create
     @print = Print.new(print_params)
+    @print.user = current_user
 
     if @print.save
       render json: @print, status: :created, location: @print
