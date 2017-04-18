@@ -5,10 +5,32 @@ end
 tom = User.create!(
   username: "tom",
   email: "tom@allen.co",
+  password: "password",
+  password_confirmation: "password"
   )
 
 Print.create!(
 title: "Ocean",
+image: "https://s24.postimg.org/r84ttg1th/ocean.jpg",
+height: 12,
+width: 24,
+medium: "Print",
+price: 20,
+body: "Blurb about the print",
+user: tom
+)
+Print.create!(
+title: "New 1",
+image: "https://s24.postimg.org/r84ttg1th/ocean.jpg",
+height: 12,
+width: 24,
+medium: "Print",
+price: 20,
+body: "Blurb about the print",
+user: tom
+)
+Print.create!(
+title: "New 2",
 image: "https://s24.postimg.org/r84ttg1th/ocean.jpg",
 height: 12,
 width: 24,
