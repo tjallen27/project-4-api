@@ -10,7 +10,7 @@ class PrintsController < ApplicationController
 
   # GET /prints/1
   def show
-    render json: @print
+    render json: @print, include: ['comments.user']
   end
 
   # POST /prints
