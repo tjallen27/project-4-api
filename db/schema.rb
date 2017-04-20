@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415110201) do
+ActiveRecord::Schema.define(version: 20170420082018) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "print_id"
+    t.index ["print_id"], name: "index_comments_on_print_id", using: :btree
+    t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
+  end
 
   create_table "prints", force: :cascade do |t|
     t.string   "title"
@@ -37,5 +47,7 @@ ActiveRecord::Schema.define(version: 20170415110201) do
     t.string   "password_digest"
   end
 
+  add_foreign_key "comments", "prints"
+  add_foreign_key "comments", "users"
   add_foreign_key "prints", "users"
 end

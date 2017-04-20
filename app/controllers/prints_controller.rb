@@ -15,7 +15,7 @@ class PrintsController < ApplicationController
 
   # POST /prints
   def create
-    @print = Print.new(print_params)
+    @print = Print.new(Uploader.upload(print_params))
     @print.user = current_user
 
     if @print.save
@@ -47,6 +47,6 @@ class PrintsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def print_params
-      params.require(:print).permit(:title, :image, :height, :width, :medium, :price, :body, :user_id)
+      params.require(:print).permit(:title, :image, :height, :width, :medium, :price, :body, :user_id, :base64)
     end
 end
