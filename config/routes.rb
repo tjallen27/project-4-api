@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :orders
   resources :comments
   root :to => 'index#index'
   resources :prints
