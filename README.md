@@ -1,6 +1,6 @@
 # PRINTSHOP
 
-![Alt text](./src/images/screenshot.png)
+![Alt text](./screenshot.png)
 
 ### Aim of the project
 
