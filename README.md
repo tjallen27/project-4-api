@@ -1,24 +1,34 @@
-# README
+# PRINTSHOP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Alt text](./src/images/screenshot.png)
 
-Things you may want to cover:
+### Aim of the project
 
-* Ruby version
+For my final project I wanted to keep it quite simple and cement some concpets of Ruby that I felt like I struggled with initially. The PRINTSHOP is designed so artists can upload and sell their prints, and users can view and filter the prints on a main index page.
 
-* System dependencies
+### Planning
 
-* Configuration
+When planning the project, I used balsamiq and Trello to work out the user journey and which routes needed to be included.
 
-* Database creation
+### Coding
 
-* Database initialization
+The app was created using Ruby on Rails to create an external API and Angular on the front end.
 
-* How to run the test suite
+### What went well
 
-* Services (job queues, cache servers, search engines, etc.)
+##### Coding
 
-* Deployment instructions
+I am very happy with how the project turned out. I didn't manage to get eveything done that I had intended but I am very proud that I managed to create the API and build an aesthetic looking app.
 
-* ...
+### What was a challenge
+
+#### Coding
+
+As there were quite a few features that I wanted to include in the project, I ran out of time and didn't manage to include as much as I would have liked. 
+
+### If we had more time we'd like to...
+
+* Filter by price, catergory, prominent colors
+* Add tags to each print
+* Finish Stripe payment
+* Include mailer when a payment is received
